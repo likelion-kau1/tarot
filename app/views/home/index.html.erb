@@ -1,12 +1,12 @@
 <div class="input-group">
   <span class="input-group-addon" id="basic-addon1">이름</span>
-  <input type="text" name="name" class="form-control" placeholder="이름을 입력하세요" aria-describedby="basic-addon1">
+  <input type="text" name="name" class="form-control" id="username" placeholder="이름을 입력하세요" aria-describedby="basic-addon1">
 </div>
 <!-- Single button -->
-<% @users.each do |u| %>
+
   <div class="btn-group">
     <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      <%= u.year %> <span class="caret"></span>
+      Year <span class="caret"></span>
     </button>
     <ul class="dropdown-menu">
       <% 1980.upto(2000) do |y| %>
@@ -17,7 +17,7 @@
   </div>
   <div class="btn-group">
     <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      <%= u.month %> <span class="caret"></span>
+      Month <span class="caret"></span>
     </button>
     <ul class="dropdown-menu">
       <% 1.upto(12) do |m| %>
@@ -28,7 +28,7 @@
   </div>
   <div class="btn-group">
     <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      <%= u.date %> <span class="caret"></span>
+      Date <span class="caret"></span>
     </button>
     <ul class="dropdown-menu">
       <% 1.upto(31) do |d| %>
@@ -37,4 +37,7 @@
       <% end %>
     </ul>
   </div>
-<% end %>
+
+<div class='btn-group'>
+  <a href="/home/selection"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span></a>
+</div>
