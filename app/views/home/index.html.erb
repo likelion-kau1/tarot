@@ -1,27 +1,40 @@
-<div class="row">
-  <div class="col-md-1"><a href= 'fsdf'>test</a></div>
-  <div class="col-md-1">.col-md-1</div>
-  <div class="col-md-1">.col-md-1</div>
-  <div class="col-md-1">.col-md-1</div>
-  <div class="col-md-1">.col-md-1</div>
-  <div class="col-md-1">.col-md-1</div>
-  <div class="col-md-1">.col-md-1</div>
-  <div class="col-md-1">.col-md-1</div>
-  <div class="col-md-1">.col-md-1</div>
-  <div class="col-md-1">.col-md-1</div>
-  <div class="col-md-1">.col-md-1</div>
-  <div class="col-md-1">.col-md-1</div>
+<div class="input-group">
+  <span class="input-group-addon" id="basic-addon1">이름</span>
+  <input type="text" name="name" class="form-control" placeholder="이름을 입력하세요" aria-describedby="basic-addon1">
 </div>
-<div class="row">
-  <div class="col-md-8">.col-md-8</div>
-  <div class="col-md-4">.col-md-4</div>
-</div>
-<div class="row">
-  <div class="col-md-4">.col-md-4</div>
-  <div class="col-md-4">.col-md-4</div>
-  <div class="col-md-4">.col-md-4</div>
-</div>
-<div class="row">
-  <div class="col-md-6">.col-md-6</div>
-  <div class="col-md-6">.col-md-6</div>
-</div>
+<!-- Single button -->
+<% @users.each do |u| %>
+  <div class="btn-group">
+    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <%= u.year %> <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu">
+      <% 1980.upto(2000) do |y| %>
+        <li><a href="#"><%= y %></a></li>
+        <li role="separator" class="divider"></li>
+      <% end %>
+    </ul>
+  </div>
+  <div class="btn-group">
+    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <%= u.month %> <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu">
+      <% 1.upto(12) do |m| %>
+        <li><a href="#"><%= m %></a></li>
+        <li role="separator" class="divider"></li>
+      <% end %>
+    </ul>
+  </div>
+  <div class="btn-group">
+    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <%= u.date %> <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu">
+      <% 1.upto(31) do |d| %>
+        <li><a href="#"><%= d %></a></li>
+        <li role="separator" class="divider"></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>

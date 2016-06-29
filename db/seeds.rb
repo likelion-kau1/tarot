@@ -4,4 +4,8 @@
 # Examples:
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+show = User.new
+show.name = '이름을 입력하세요'
+show.year = 'Year'
+show.month = 'Month'
+show.date = 'Date'
