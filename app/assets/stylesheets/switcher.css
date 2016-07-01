@@ -1,0 +1,454 @@
+/*
+USE
+ .TestClass {
+ .hex-to-rgba ((@brand-color, .6);
+  color: @rgba;
+}
+
+*/
+/*
+.TestClass {
+  .bg-rgba(@brand-color, .9);
+}
+
+*/
+/*
+.font-size(@sizeValue) {
+  @remValue: @sizeValue;
+  @pxValue: (@sizeValue * 10);
+  font-size: ~"@{pxValue}px";
+  font-size: ~"@{remValue}rem";
+
+}
+*/
+/*
+.font-size(@font-size){
+  @pxFontValue: (@font-size / 10);
+  @pxLineValue: (@font-size / 10 * 1.5);
+  font-size: @font-size * 1px;
+  line-height: @font-size * 1.5 * 1px;
+  font-size: ~"@{pxFontValue}rem";
+  line-height: ~"@{pxLineValue}rem";
+}*/
+/* ==========================================================================
+        Style Switcher CSS For  Color OverWrite
+  ========================================================================== */
+a,
+a:hover,
+a:focus {
+  color: #3498db;
+  text-decoration: none;
+}
+.cbx-subscribe-form {
+  border-color: #2077b2;
+}
+.cblz-next:focus {
+  background: #3498db;
+  border-color: #3498db;
+}
+#lz-headertop .cbx-header-inner {
+  background: rgba(52, 152, 219, 0.85);
+}
+.lz-main-heading > span.lz-brand {
+  color: #3498db;
+}
+.lz-overlap {
+  background-color: #3498db;
+}
+.lz-submit-btn {
+  background-color: #3498db;
+}
+.lz-brand-color,
+.lz-icon {
+  color: #3498db;
+}
+.lz-flip .card .back {
+  background: #3498db;
+}
+.portfolio-select .hvr-underline-from-center:before {
+  background: #3498db;
+}
+.og-details h3,
+.da-thumbs li a {
+  color: #3498db;
+}
+.portfolio-select ul li {
+  border: 0px solid #3498db;
+  color: #3498db;
+}
+.lz-team-img img {
+  border: 0px solid #3498db;
+}
+.lz-git-form-control {
+  border: opx solid #3498db;
+}
+.lz-git-submit-btn {
+  background-color: #ffffff;
+  border: 0px solid #3498db;
+}
+.lz-git-submit-btn:hover,
+.lz-git-submit-btn:focus,
+.lz-git-submit-btn:active {
+  background-color: #3498db;
+}
+.price-text-color {
+  color: #3498db;
+}
+.lz-latest-post-view-all {
+  color: #3498db;
+}
+.cblz-next {
+  background: #3498db;
+  border-color: #3498db;
+}
+.btn-success:hover,
+.btn-success:focus {
+  background-color: #3498db;
+}
+.lz-col-item .lz-ltp-back div,
+.lz-col-item .lz-ltp-back p,
+.lz-col-item .lz-ltp-back a {
+  background: #3498db;
+}
+.cbx-block-text a {
+  color: #3498db;
+}
+#carousel-reviews .carousel-control.right {
+  color: #3498db;
+}
+.cbx-person-text a {
+  color: #3498db;
+}
+.cblz-newnext {
+  color: #3498db;
+}
+.item blockquote p:before {
+  color: #3498db;
+}
+#quote-carousel .carousel-indicators .active {
+  background: #3498db;
+}
+.cblz-footer-content .lz-brand {
+  color: #3498db !important;
+}
+#subscribe {
+  color: #3498db !important;
+}
+input#subscribe::-webkit-input-placeholder {
+  /* WebKit browsers */
+  color: #3498db;
+}
+input#subscribe::-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #3498db;
+  opacity: 1;
+}
+input#subscribe::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #3498db;
+  opacity: 1;
+}
+input#subscribe::ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  color: #3498db;
+}
+::-webkit-input-placeholder {
+  color: #3498db;
+}
+#carousel-reviews .carousel-control.left {
+  color: #3498db;
+}
+.lz-submit-btn:hover {
+  background-color: #3498db !important;
+}
+.lz-social-list:hover {
+  background: #ffffff;
+}
+.lz-tooltip-inner {
+  background: #ffffff;
+}
+.lz-tooltip .lz-tooltip-arrow {
+  border-top-color: #3498db !important;
+}
+.cblz-next {
+  background: #3498db;
+}
+#carousel-reviews .carousel-control.left,
+.carousel-control.right:hover,
+.cblz-next:active {
+  background: none;
+}
+.carousel-control,
+.carousel-control i,
+.carousel-control:hover {
+  color: #3498db;
+  opacity: 1;
+}
+.lz-switcher-btn {
+  background: #3498db;
+}
+.lz-latest-controls a,
+.lz-latest-controls a:hover,
+.lz-latest-controls a:active {
+  color: #fff;
+  background: #3498db;
+}
+.og-details a:hover {
+  border-color: #3498db;
+}
+div.lz-kkcountdown .kkc-dni-text,
+div.lz-kkcountdown .kkc-godz-text,
+div.lz-kkcountdown .kkc-min-text,
+div.lz-kkcountdown .kkc-sec-text,
+div.lz-kkcountdown .kkc-days-text,
+div.lz-kkcountdown .kkc-hours-text {
+  margin-right: 10px;
+  color: #fff;
+}
+#cbx-team .font-single-img img {
+  border: 0px solid #3498db;
+}
+.cbx-heading h2 {
+  color: #3498db;
+}
+.cbx-heading hr {
+  border-color: #3498db;
+  border: 2px dashed #3498db;
+}
+.col-item {
+  border-color: #3498db;
+}
+.col-item:hover {
+  border-color: #3498db;
+}
+.cbx-contactform-area .cbx-contactform-inner {
+  background: rgba(52, 152, 219, 0.9);
+}
+#cbx-team .cbx-font-side {
+  border: 0px solid #3498db;
+}
+.cbx-input-group input:focus {
+  border: 1px dashed #3498db;
+}
+#cbx-aboutus .cbx-about-text p span a {
+  color: #3498db;
+}
+#cbx-aboutus .cbx-single-item:hover {
+  background: #3498db none repeat scroll 0 0;
+}
+#cbx-aboutus .cbx-single-item .single-fa {
+  color: #3498db;
+}
+#cbx-aboutus .cbx-about-text p span a {
+  color: #3498db;
+}
+#cbx-aboutus .cbx-single-item .single-fa {
+  color: #3498db;
+}
+#cbx-aboutus .cbx-single-item:hover {
+  background: #3498db;
+}
+#cbx-aboutus .cbx-single-item:hover .single-fa {
+  background: #2077b2;
+}
+#cbx-aboutus .cbx-single-item:hover a:hover {
+  color: #2077b2;
+}
+.portfolio-select ul li:hover,
+.portfolio-select ul li:active {
+  border: 2px dashed #3498db;
+}
+#cbx-team .cbx-font-side {
+  border: 0px solid #3498db;
+}
+#cbx-team .cbx-back-side {
+  background: #3498db;
+}
+#cbx-team .cbx-member-social i {
+  color: #2077b2;
+}
+#cbx-team .font-single-img img {
+  border: 0px solid #3498db;
+}
+.col-item:hover {
+  background: #3498db none repeat scroll 0 0;
+}
+#cbx-award .cbx-counter-area i {
+  background: #3498db;
+}
+#cbx-award .cbx-counter-area:hover {
+  background: #3498db;
+}
+#cbx-award .cbx-counter-area:hover i {
+  background: #2077b2;
+}
+#cbx-pricing .single-pricing .spricing-top h3 {
+  color: #3498db;
+}
+#cbx-pricing .single-pricing .spricing-bottom h3 {
+  color: #3498db;
+}
+#cbx-pricing .single-pricing .spricing-bottom a {
+  color: #3498db;
+}
+#cbx-pricing .single-pricing ul li i {
+  color: #3498db;
+}
+#cbx-pricing .single-pricing:hover {
+  border: 1px dashed #3498db;
+}
+#cbx-pricing .recommended-pricing {
+  background: #3498db;
+}
+#cbx-pricing .recommended-pricing .spricing-bottom h3 {
+  color: #ffffff;
+}
+#cbx-pricing .recommended-pricing .spricing-bottom a {
+  color: #3498db;
+}
+#cbx-pricing .recommended-pricing .spricing-bottom a:hover {
+  background: #2077b2;
+}
+#cbx-news .single-news .snews-bottom h4 {
+  color: #3498db;
+}
+#cbx-news .single-news .snews-bottom a {
+  background: #3498db;
+}
+#cbx-news .single-news:hover .snews-bottom {
+  background: #3498db;
+}
+#cbx-news .single-news:hover .snews-bottom a {
+  color: #3498db;
+}
+#cbx-news .single-news:hover .snews-bottom a:hover {
+  background: #2077b2;
+}
+.glyphicon {
+  color: #3498db;
+}
+.lz-git-submit-btn {
+  /* background-color: @brandcolor2;*/
+  border: 1px solid #2077b2;
+}
+.lz-git-submit-btn:hover,
+.lz-git-submit-btn:focus,
+.lz-git-submit-btn:active {
+  background-color: #2077b2;
+}
+.lz-git-form-control {
+  border: 1px solid #5faee3 !important;
+}
+.lz-git-form-control {
+  border: 1px solid #5faee3 !important;
+}
+.lz-git-form-control:focus {
+  border: 1px dashed #3498db !important;
+}
+.cbx-contact-info p span a:hover {
+  background: #2077b2 none repeat scroll 0 0;
+}
+.cbx-submit {
+  color: #3498db;
+}
+.cbx-submit:hover {
+  border: 2px solid #2077b2;
+}
+#cbx-portfolio .cbx-select li a.active {
+  color: #3498db;
+}
+#cbx-portfolio .single-portfolio .figure-caption {
+  background: rgba(52, 152, 219, 0.8);
+}
+.cbx-contact-info p span a {
+  color: #3498db;
+}
+input.placeholder-style::-webkit-input-placeholder {
+  /* WebKit browsers */
+  color: #3498db;
+}
+input.placeholder-style::-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #3498db;
+  opacity: 1;
+}
+input.placeholder-style::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #3498db;
+  opacity: 1;
+}
+input.placeholder-style::ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  color: #3498db;
+}
+textarea.placeholder-style::-webkit-textarea-placeholder {
+  /* WebKit browsers */
+  color: #3498db;
+}
+textarea.placeholder-style::-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #3498db;
+  opacity: 1;
+}
+textarea.placeholder-style::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #3498db;
+  opacity: 1;
+}
+textarea.placeholder-style::ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  color: #3498db;
+}
+::-webkit-input-placeholder {
+  color: #3498db;
+}
+.lz-git-submit-btn {
+  background-color: #3498db;
+}
+.lz-social-list:hover {
+  color: #3498db;
+}
+.lz-tooltip-inner {
+  background: #3498db;
+}
+::-webkit-input-placeholder {
+  /* WebKit browsers */
+  color: #3498db;
+}
+/* NEW CODE*/
+::-webkit-input-placeholder {
+  color: #3498db;
+}
+:-moz-placeholder {
+  color: #3498db;
+}
+::-moz-placeholder {
+  color: #3498db;
+}
+:-ms-input-placeholder {
+  color: #3498db;
+}
+/* Different color for some fields */
+#name_2::-webkit-input-placeholder,
+#textarea_2::-webkit-input-placeholder {
+  color: #3498db;
+}
+#name_2:-moz-placeholder,
+#textarea_2:-moz-placeholder {
+  color: #3498db;
+}
+#name_2::-moz-placeholder,
+#textarea_2::-moz-placeholder {
+  color: #3498db;
+}
+#name_2:-ms-input-placeholder,
+#textarea_2:-ms-input-placeholder {
+  color: #3498db;
+}
+/* NEW CODE END*/
+#cbx-team .cbx-font-side {
+/*  border-color: #3498db; */
+}
+/* ==========================================================================
+        Style Switcher CSS For  Color OverWrite END
+  ========================================================================== */

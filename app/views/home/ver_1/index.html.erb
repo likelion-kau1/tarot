@@ -1,0 +1,43 @@
+<div class="input-group">
+  <span class="input-group-addon" id="basic-addon1">이름</span>
+  <input type="text" name="name" class="form-control" id="username" placeholder="이름을 입력하세요" aria-describedby="basic-addon1">
+</div>
+<!-- Single button -->
+
+  <div class="btn-group">
+    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Year <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu">
+      <% 1980.upto(2000) do |y| %>
+        <li><a href="#"><%= y %></a></li>
+        <li role="separator" class="divider"></li>
+      <% end %>
+    </ul>
+  </div>
+  <div class="btn-group">
+    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Month <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu">
+      <% 1.upto(12) do |m| %>
+        <li><a href="#"><%= m %></a></li>
+        <li role="separator" class="divider"></li>
+      <% end %>
+    </ul>
+  </div>
+  <div class="btn-group">
+    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Date <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu">
+      <% 1.upto(31) do |d| %>
+        <li><a href="#"><%= d %></a></li>
+        <li role="separator" class="divider"></li>
+      <% end %>
+    </ul>
+  </div>
+
+<div class='btn-group'>
+  <a href="/home/selection"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span></a>
+</div>

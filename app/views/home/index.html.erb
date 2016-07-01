@@ -1,43 +1,83 @@
-<div class="input-group">
-  <span class="input-group-addon" id="basic-addon1">이름</span>
-  <input type="text" name="name" class="form-control" id="username" placeholder="이름을 입력하세요" aria-describedby="basic-addon1">
-</div>
-<!-- Single button -->
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>타로카드 운세 확인</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Fallback For IE 9 [ Media Query and html5 Shim] -->
+        <!--[if lt IE 9]>
+        <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
 
-  <div class="btn-group">
-    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      Year <span class="caret"></span>
-    </button>
-    <ul class="dropdown-menu">
-      <% 1980.upto(2000) do |y| %>
-        <li><a href="#"><%= y %></a></li>
-        <li role="separator" class="divider"></li>
-      <% end %>
-    </ul>
-  </div>
-  <div class="btn-group">
-    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      Month <span class="caret"></span>
-    </button>
-    <ul class="dropdown-menu">
-      <% 1.upto(12) do |m| %>
-        <li><a href="#"><%= m %></a></li>
-        <li role="separator" class="divider"></li>
-      <% end %>
-    </ul>
-  </div>
-  <div class="btn-group">
-    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      Date <span class="caret"></span>
-    </button>
-    <ul class="dropdown-menu">
-      <% 1.upto(31) do |d| %>
-        <li><a href="#"><%= d %></a></li>
-        <li role="separator" class="divider"></li>
-      <% end %>
-    </ul>
-  </div>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
 
-<div class='btn-group'>
-  <a href="/home/selection"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span></a>
-</div>
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <!-- Bootstrap 3.0.3 added, change to bootstrap.min.css and bootstrap-theme.min.css if you need the minified version -->
+        <link rel="shortcut icon" type="image/x-icon" href="img/lzfavicon.ico" />
+        <link rel="icon" type="image/x-icon" href="img/lzfavicon.ico" />
+
+        <!-- Vendor CSS -->
+        <link rel="stylesheet" href="css/animate.css" media="all"  />
+        <link rel="stylesheet" href="css/grid.css" media="all"  />
+        <link rel="stylesheet" href="css/bootstrap.min.css" media="all" />
+        <link rel="stylesheet" href="css/bootstrap-theme.min.css" media="all" />
+        <link rel="stylesheet" href="css/hover.css" media="all" />
+        <link rel="stylesheet" href="css/cbxnewgridhover.css" media="all" />
+        <link rel="stylesheet" href="css/font-awesome.min.css" media="all" />
+        <!-- <link rel="stylesheet" href="css/animate.css"> -->
+        <!-- <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"> -->
+
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:300, 400,600,700|Raleway:400,300,500,700,600,900' rel='stylesheet' type='text/css'>
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="css/style.css" media="all" />
+
+        <link rel="stylesheet" id="lz-switcher-style" href="css/switcher-default.css" media="all" />
+
+
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+        <!-- DNS Prefetch for Google Hosted libraries, Remove if you don't need that. -->
+        <link rel="dns-prefetch" href="//ajax.googleapis.com">
+
+
+    </head>
+    <body>
+    <!--[if lt IE 7]>
+        <p class="browsehappy">We are Extreamly sorry, But the browser you are using is probably from when civilization started. Which is way behind to view this site properly. Please update to a modern browser, At least a real browser. </p>
+        <![endif]-->
+        <div class="cblzbody-wrapper">
+        <header>
+            <div id="lz-headertop" class="lz-headertop">
+                <div class="cbx-header-inner">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div class="lz-heading text-center">
+                                    <h1 class="lz-main-heading  wow bounceIn animated ">타로카드 <span class="lz-brand">운세 확인</span></h1>
+                                    <p class="lz-sub-heading wow slideInRight">이름과 생년월일을 입력하세요</p>
+                                </div>
+                            </div>
+                        </div> <!-- //ROW headertop-->
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-offset-2 col-sm-8 col-md-offset-3 col-md-6  ">
+                                <div class="lz-subscribe wow slideInRight animated">
+                                    <form class="subscribe-form cbx-subscribe-form" role="form">
+                                        <div class="input-group cbx-input-group">
+                                            <input class="lz-input form-control" type="text" id="subscribe" placeholder="이름을 입력하세요" required="required">
+                                                <span class="input-group-btn">
+                                                <a href="/home/selection"><button class="btn lz-submit-btn"
+                                                        type="button ">확인</button></a>
+                                                </span>
+                                        </div><!-- /input-group -->
+                                    </form>
+                                </div>
+                            </div>
+                    </div> <!-- // Header CONTAINER -->
+                </div> <!-- //HEADER inner -->
+            </div> <!-- //HEADER TOP -->
+        </header>

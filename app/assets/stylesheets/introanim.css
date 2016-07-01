@@ -1,0 +1,238 @@
+/* ------------------------------------------------------------------------
+    # cbxintroanimation-bs.css - Module - mod_cbxintroanimation
+    # ------------------------------------------------------------------------
+    # author    Codeboxr Team
+    # copyright Copyright (C) 2011-2014 codeboxr.com. All Rights Reserved.
+    # @license - http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
+    # Websites: http://codeboxr.com
+    # Technical Support:  Forum - coming soon
+    ------------------------------------------------------------------------- */
+    .cbx-intro-wrapper {
+        clear: both;
+        margin: 50px 0 auto;
+    }
+    .cbx_intro_img_div img {
+        max-width: 100%;
+        border-radius:50%;
+    }
+
+
+    .cbx_intro_btn {
+      background: none repeat scroll 0 0 #f5740a;
+      border: medium none;
+      border-radius: 5px;
+      color: #fff;
+      padding: 5px 10px;
+  }
+
+  .cbx_intro_inner {
+    text-align: center;
+    text-align: -moz-center !important;
+    text-align: -webkit-center;
+}
+
+
+.cbx_intro_img_div img {
+    max-width: 100%;
+    border-radius:50%;
+}
+
+
+
+.cbx_intro_first_div
+{
+    animation: 0.7s ease 0s normal none 1 running anim;
+    background-color: #f5832b;
+    border-radius: 50%;
+    height: 200px;
+    padding: 10px;
+    width: 200px;
+    position: relative;
+    right: 12px;
+    top:-2px;
+
+}
+
+
+.cbx_intro_second_div
+{
+    width:180px; height:180px;
+    border:1px solid #ffffff;
+    border-radius:50%;
+    -webkit-animation:anim 1s 1 ease;
+    -moz-animation:anim 1s 1 ease;
+    -ms-animation:anim 1s 1 ease;
+    animation:anim 1s 1 ease;
+}
+
+
+.cbx_intro_img_div
+{
+    width:180px; height:180px;
+    -webkit-animation:animuser 1s 1 ease;
+    -moz-animation:animuser 1s 1 ease;
+    -ms-animation:animuser 1s 1 ease;
+    animation:animuser 1s 1 ease;
+}
+.cbx_intro_txt_welcome
+{
+    font-size: 46px;
+    font-weight: 300;
+    color: #f5832b;
+    padding-top: 25px;
+    -webkit-animation: animwelcome 1.7s 1 ease-in;
+    -moz-animation: animwelcome 1.7s 1 ease-in;
+    -ms-animation: animwelcome 1.7s 1 ease-in;
+    animation: animwelcome 1.7s 1 ease-in;
+}
+.cbx_intro_txt_user
+{
+    font-size: 22px;
+    font-weight: 100;
+    color: #f5832b;
+    -webkit-animation: animuser 1.9s 1 ease-in;
+    -moz-animation: animuser 1.9s 1 ease-in;
+    -ms-animation: animuser 1.9s 1 ease-in;
+    animation: animuser 1.9s 1 ease-in;
+}
+
+.cbx_intro_txt_user a{
+    font-size: 25px;
+    font-weight: normal;
+    color: #f5832b;
+    -webkit-animation: animuser 1.9s 1 ease-in;
+    -moz-animation: animuser 1.9s 1 ease-in;
+    -ms-animation: animuser 1.9s 1 ease-in;
+    animation: animuser 1.9s 1 ease-in;
+}
+
+
+
+.cbx_intro_first_circle
+{
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 2px;
+    height: 220px;
+    left: 50%;
+    margin-left: -122px;
+    margin-top: -12px;
+    padding: 10px;
+    position: absolute;
+    width: 220px;
+    border-top:2px solid #ffffff;
+    border-right:2px solid #ffffff;
+    border-bottom:2px solid #ffffff;
+    border-left:2px solid #f5740a;
+    -webkit-animation:anim_wifeo 1.4s infinite linear;
+    -moz-animation:anim_wifeo 1.4s infinite linear;
+    -ms-animation:anim_wifeo 1.4s infinite linear;
+    animation:anim_wifeo 1.4s infinite linear;
+}
+
+
+
+@-webkit-keyframes anim
+{
+    0%{-webkit-transform:scale(0);}
+    50%{-webkit-transform:scale(1.7);}
+    100%{-webkit-transform:scale(1);}
+}
+@-moz-keyframes anim
+{
+    0%{-moz-transform:scale(0);}
+    50%{-moz-transform:scale(1.7);}
+    100%{-moz-transform:scale(1);}
+}
+@-ms-keyframes anim
+{
+    0%{-ms-transform:scale(0);}
+    50%{-ms-transform:scale(1.7);}
+    100%{-ms-transform:scale(1);}
+}
+@keyframes anim
+{
+    0%{transform:scale(0);}
+    50%{transform:scale(1.7);}
+    100%{transform:scale(1);}
+}
+@-webkit-keyframes animwelcome
+{
+    0%{-webkit-transform:scale(0);}
+    50%{-webkit-transform:scale(0);}
+    75%{-webkit-transform:scale(1.4);}
+    100%{-webkit-transform:scale(1);}
+}
+@-moz-keyframes animwelcome
+{
+    0%{-moz-transform:scale(0);}
+    50%{-moz-transform:scale(0);}
+    75%{-moz-transform:scale(1.4);}
+    100%{-moz-transform:scale(1);}
+}
+@-ms-keyframes animwelcome
+{
+    0%{-ms-transform:scale(0);}
+    50%{-ms-transform:scale(0);}
+    75%{-ms-transform:scale(1.4);}
+    100%{-ms-transform:scale(1);}
+}
+@keyframes animwelcome
+{
+    0%{transform:scale(0);}
+    50%{transform:scale(0);}
+    75%{transform:scale(1.4);}
+    100%{transform:scale(1);}
+}
+@-webkit-keyframes animuser
+{
+    0%{-webkit-transform:scale(0);}
+    50%{-webkit-transform:scale(0);}
+    75%{-webkit-transform:scale(1.4);}
+    100%{-webkit-transform:scale(1);}
+}
+@-moz-keyframes animuser
+{
+    0%{-moz-transform:scale(0);}
+    50%{-moz-transform:scale(0);}
+    75%{-moz-transform:scale(1.4);}
+    100%{-moz-transform:scale(1);}
+}
+@-ms-keyframes animuser
+{
+    0%{-ms-transform:scale(0);}
+    50%{-ms-transform:scale(0);}
+    75%{-ms-transform:scale(1.4);}
+    100%{-ms-transform:scale(1);}
+}
+@keyframes animuser
+{
+    0%{transform:scale(0);}
+    50%{transform:scale(0);}
+    75%{transform:scale(1.4);}
+    100%{transform:scale(1);}
+}
+@-webkit-keyframes anim_wifeo
+{
+    0%{-webkit-transform:rotate(0deg);}
+    50%{-webkit-transform:rotate(360deg);}
+    100%{-webkit-transform:rotate(720deg);}
+}
+@-moz-keyframes anim_wifeo
+{
+    0%{-moz-transform:rotate(0deg);}
+    50%{-moz-transform:rotate(360deg);}
+    100%{-moz-transform:rotate(720deg);}
+}
+@-ms-keyframes anim_wifeo
+{
+    0%{-ms-transform:rotate(0deg);}
+    50%{-ms-transform:rotate(360deg);}
+    100%{-ms-transform:rotate(720deg);}
+}
+@keyframes anim_wifeo
+{
+    0%{transform:rotate(0deg);}
+    50%{transform:rotate(360deg);}
+    100%{transform:rotate(720deg);}
+}
