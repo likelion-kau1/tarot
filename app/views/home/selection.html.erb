@@ -1,0 +1,101 @@
+<div class="container" style="background : url('Background.jpg')">
+  
+  <div class="row">
+    <% 0.upto(5) do |y| %>
+      <div class="card">
+        <div class="col-md-2">
+          <div class="front">
+            <%= image_tag "back.png" %>
+          </div>
+          <div class="back">
+            <%= image_tag @card_image[y] %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <div class="row">
+    <% 6.upto(11) do |y| %>
+      <div class="card">
+        <div class="col-md-2">
+          <div class="front"> 
+            <%= image_tag "back.png" %>
+          </div>
+          <div class="back">
+            <%= image_tag @card_image[y] %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <div class="row">
+    <% 12.upto(17) do |y| %>
+      <div class="card">
+        <div class="col-md-2">
+          <div class="front">
+            <%= image_tag "back.png" %>
+          </div>
+          <div class="back">
+            <%= image_tag @card_image[y] %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <div class="row">
+    <% 18.upto(21) do |y| %>
+      <div class="card"> 
+        <div class="col-md-2">
+          <div class="front">
+            <%= image_tag "back.png" %>
+          </div>
+          <div class="back">
+            <%= image_tag @card_image[y] %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+  
+  <div class='btn-group'>
+    <a href="/home/index"><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span></a>
+  </div>
+  <div class='btn-group'>
+    <a href="/home/result"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span></a>
+  </div>
+
+</div>
+
+<script>
+var cardflip=function(){
+  $(".card").flip({
+        axis: 'y',
+        trigger: 'click',
+      });
+}
+var value = 0;
+
+if (value < 4){
+  cardflip();
+    value++;
+}; else{
+  $("#card").off(".flip");
+};
+
+</script>
