@@ -2454,16 +2454,16 @@ Browse Happy prompt
 }
 */
 /* START: Accommodating for IE */
-.flip-container:hover .back,
-.flip-container.hover .back {
+.flip-container:active .back,
+.flip-container.active .back {
   -webkit-transform: rotateY(0deg);
   -moz-transform: rotateY(0deg);
   -o-transform: rotateY(0deg);
   -ms-transform: rotateY(0deg);
   transform: rotateY(0deg);
 }
-.flip-container:hover .front,
-.flip-container.hover .front {
+.flip-container:active .front,
+.flip-container.active .front {
   -webkit-transform: rotateY(180deg);
   -moz-transform: rotateY(180deg);
   -o-transform: rotateY(180deg);
@@ -2598,16 +2598,16 @@ Browse Happy prompt
 }
 */
 /* START: Accommodating for IE */
-.vertical.flip-container:hover .back,
-.vertical.flip-container.hover .back {
+.vertical.flip-container:active .back,
+.vertical.flip-container.active .back {
   -webkit-transform: rotateX(0deg);
   -moz-transform: rotateX(0deg);
   -o-transform: rotateX(0deg);
   -ms-transform: rotateX(0deg);
   transform: rotateX(0deg);
 }
-.vertical.flip-container:hover .front,
-.vertical.flip-container.hover .front {
+.vertical.flip-container:active .front,
+.vertical.flip-container.active .front {
   -webkit-transform: rotateX(180deg);
   -moz-transform: rotateX(180deg);
   -o-transform: rotateX(180deg);
@@ -2662,10 +2662,10 @@ Browse Happy prompt
   perspective: 1000;
   transform-style: preserve-3d;
 }
-#cbx-team .flip-container:hover .back {
+#cbx-team .flip-container:active .back {
   transform: rotateY(0deg);
 }
-#cbx-team .flip-container:hover .front {
+#cbx-team .flip-container:active .front {
   transform: rotateY(180deg);
 }
 #cbx-team .flip-container,
@@ -2701,10 +2701,10 @@ Browse Happy prompt
 #cbx-team .vertical .back {
   transform: rotateX(180deg);
 }
-#cbx-team .vertical.flip-container:hover .back {
+#cbx-team .vertical.flip-container:active .back {
   transform: rotateX(0deg);
 }
-#cbx-team .vertical.flip-container:hover .front {
+#cbx-team .vertical.flip-container:active .front {
   transform: rotateX(180deg);
 }
 #cbx-aboutus .cbx-inner {

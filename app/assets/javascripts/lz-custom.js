@@ -81,66 +81,11 @@ jQuery(document).ready(function ($) {
         interval: 4000
     });
 
-
-// Countdown
-    // default
-    if ( $('#countdowns-dashboard').length ) {
-        $('#countdowns-dashboard').countDown({
-            targetDate: {
-                'day':    16,
-                'month':  12,
-                'year':   2015,
-                'hour':   0,
-                'min':    0,
-                'sec':    0
-            },
-            omitWeeks: true
-        });
-    }
-
-
-    // circular
-    if ( $('.lz-circular-countdown-container').length ) {
-        $('.lz-circular-countdown-container').final_countdown({
-            now: Date.now()/1000,
-            end: new Date(2015, 12, 16).getTime()/1000,
-            selectors: {
-                value_seconds: '.lz-circular-clock-seconds .lz-circular-val',
-                canvas_seconds: 'lz-circular-canvas_seconds',
-                value_minutes: '.lz-circular-clock-minutes .lz-circular-val',
-                canvas_minutes: 'lz-circular-canvas_minutes',
-                value_hours: '.lz-circular-clock-hours .lz-circular-val',
-                canvas_hours: 'lz-circular-canvas_hours',
-                value_days: '.lz-circular-clock-days .lz-circular-val',
-                canvas_days: 'lz-circular-canvas_days'
-            }
-        });
-    }
-
-
-    // kk countdown
-
-    //$('.lz-kkcountdown').attr('data-time', new Date(2015, 2, 26).getTime()/1000);
-
-    if ( $('.lz-kkcountdown').length ) {
-        $('.lz-kkcountdown').attr('data-time', new Date(2015, 12, 16).getTime()/1000);
-        $('.lz-kkcountdown').kkcountdown({
-            dayText		: ' day ',
-            daysText 	: ' days ',
-            hoursText	: ' h ',
-            minutesText	: ' m ',
-            secondsText	: ' s',
-            displayZeroDays : true,
-            rusNumbers  :   false
-        });
-    }
-
-
 // For Wow Effect
     new WOW().init();
 
 
-    
+
 // for hover effect
     //$('.cb-grid > li').each(function() { $(this).hoverdir(); });
 
@@ -268,25 +213,6 @@ jQuery(document).ready(function ($) {
             infoWindow: []
         }
     };
-
-
-// Show google Maps
-    $('.map_canvas').CbMaps({
-        mapOptions: {
-            latitude: ['23.810637'],
-            longitude: ['90.400615'],
-            center: true,
-            scrollwheel: false,
-            zoom: 8,
-            mapType: 'satellite', //google.maps.MapTypeId.ROADMAP
-            icon: lz_path + '/img/map-icon.png',
-            infoWindow: [{
-                title: 'Codeboxr',
-                content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias debitis delectus dolorum enim ex harum, natus quaerat voluptas? Est et labore molestiae molestias odio possimus quae quaerat quam reiciendis, sunt.'
-            }]
-        }
-    });
-
 
     /********************************************
         *** Start Contact Form Validation And Ajax Submission
