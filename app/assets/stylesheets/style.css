@@ -2662,10 +2662,10 @@ Browse Happy prompt
   perspective: 1000;
   transform-style: preserve-3d;
 }
-#cbx-team .flip-container:active .back {
+#cbx-team .click.flip-container .back {
   transform: rotateY(0deg);
 }
-#cbx-team .flip-container:active .front {
+#cbx-team .click.flip-container .front {
   transform: rotateY(180deg);
 }
 #cbx-team .flip-container,
@@ -2701,10 +2701,10 @@ Browse Happy prompt
 #cbx-team .vertical .back {
   transform: rotateX(180deg);
 }
-#cbx-team .vertical.flip-container:active .back {
+#cbx-team .vertical.flip-container:target .back {
   transform: rotateX(0deg);
 }
-#cbx-team .vertical.flip-container:active .front {
+#cbx-team .vertical.flip-container:target .front {
   transform: rotateX(180deg);
 }
 #cbx-aboutus .cbx-inner {
