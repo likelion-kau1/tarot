@@ -14,6 +14,10 @@
 ActiveRecord::Schema.define(version: 20160706075212) do
 
   create_table "users", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "year"
+    t.integer  "month"
+    t.integer  "date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
