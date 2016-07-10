@@ -2662,10 +2662,10 @@ Browse Happy prompt
   perspective: 1000;
   transform-style: preserve-3d;
 }
-#cbx-team .click.flip-container .back {
+#cbx-team .flip-container:active .back {
   transform: rotateY(0deg);
 }
-#cbx-team .click.flip-container .front {
+#cbx-team .flip-container:active .front {
   transform: rotateY(180deg);
 }
 #cbx-team .flip-container,
