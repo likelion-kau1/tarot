@@ -44,7 +44,7 @@ html {
 body {
   padding: 0;
   margin: 0 auto;
-  background: #f1f1f1;
+  background-color: #f1f1f1;
   color: #222222;
   font-family: 'Raleway', Arial, sans-serif;
   font-weight: 600;
@@ -687,6 +687,283 @@ input#subscribe::ms-input-placeholder {
 /* ==========================================================================
         //CBX  Theme Style End
 ========================================================================== */
+/*FOR FLIP*/
+/* simple */
+.flip-container {
+  -webkit-perspective: 1000;
+  -moz-perspective: 1000;
+  -ms-perspective: 1000;
+  perspective: 1000;
+  -ms-transform: perspective(1000px);
+  -moz-transform: perspective(1000px);
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  /*border: 1px solid #ccc;*/
+}
+/*
+.flip-container: .flipper, .flip-container.hover .flipper, #flip-toggle.flip .flipper {
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+}
+*/
+/* START: Accommodating for IE */
+.flip-container:active .back,
+.flip-container.active .back {
+  -webkit-transform: rotateY(0deg);
+  -moz-transform: rotateY(0deg);
+  -o-transform: rotateY(0deg);
+  -ms-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+}
+.flip-container:active .front,
+.flip-container.active .front {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+/* END: Accommodating for IE */
+.flip-container,
+.front,
+.back {
+  width: 320px;
+  height: 427px;
+}
+.flipper {
+  -webkit-transition: 0.6s;
+  -webkit-transform-style: preserve-3d;
+  -ms-transition: 0.6s;
+  -moz-transition: 0.6s;
+  -moz-transform: perspective(1000px);
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+.front,
+.back {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transition: 0.6s;
+  -webkit-transform-style: preserve-3d;
+  -webkit-transform: rotateY(0deg);
+  -moz-transition: 0.6s;
+  -moz-transform-style: preserve-3d;
+  -moz-transform: rotateY(0deg);
+  -o-transition: 0.6s;
+  -o-transform-style: preserve-3d;
+  -o-transform: rotateY(0deg);
+  -ms-transition: 0.6s;
+  -ms-transform-style: preserve-3d;
+  -ms-transform: rotateY(0deg);
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  transform: rotateY(0deg);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.front {
+  -webkit-transform: rotateY(0deg);
+  -ms-transform: rotateY(0deg);
+  background: lightgreen;
+  z-index: 2;
+}
+.back {
+  background: lightblue;
+  -webkit-transform: rotateY(-180deg);
+  -moz-transform: rotateY(-180deg);
+  -o-transform: rotateY(-180deg);
+  -ms-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
+}
+.front .name {
+  font-size: 2em;
+  display: inline-block;
+  background: rgba(33, 33, 33, 0.9);
+  color: #f8f8f8;
+  font-family: Courier;
+  padding: 5px 10px;
+  border-radius: 5px;
+  bottom: 60px;
+  left: 25%;
+  position: absolute;
+  text-shadow: 0.1em 0.1em 0.05em #333;
+  display: none;
+  -webkit-transform: rotate(-20deg);
+  -moz-transform: rotate(-20deg);
+  -ms-transform: rotate(-20deg);
+  transform: rotate(-20deg);
+}
+.back-logo {
+  position: absolute;
+  top: 40px;
+  left: 90px;
+  width: 160px;
+  height: 117px;
+}
+.back-title {
+  font-weight: bold;
+  color: #00304a;
+  position: absolute;
+  top: 180px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  text-shadow: 0.1em 0.1em 0.05em #acd7e5;
+  font-family: Courier;
+  font-size: 22px;
+}
+.back p {
+  position: absolute;
+  bottom: 40px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  padding: 0 20px;
+  font-size: 18px;
+}
+/* vertical */
+.vertical.flip-container {
+  position: relative;
+}
+.vertical .back {
+  -webkit-transform: rotateX(180deg);
+  -moz-transform: rotateX(180deg);
+  -ms-transform: rotateX(180deg);
+  transform: rotateX(180deg);
+}
+.vertical.flip-container .flipper {
+  -webkit-transform-origin: 100% 213.5px;
+  -moz-transform-origin: 100% 213.5px;
+  -ms-transform-origin: 100% 213.5px;
+  transform-origin: 100% 213.5px;
+}
+/*
+.vertical.flip-container:hover .flipper {
+    -webkit-transform: rotateX(-180deg);
+    -moz-transform: rotateX(-180deg);
+    -ms-transform: rotateX(-180deg);
+    transform: rotateX(-180deg);
+}
+*/
+/* START: Accommodating for IE */
+.vertical.flip-container:active .back,
+.vertical.flip-container.active .back {
+  -webkit-transform: rotateX(0deg);
+  -moz-transform: rotateX(0deg);
+  -o-transform: rotateX(0deg);
+  -ms-transform: rotateX(0deg);
+  transform: rotateX(0deg);
+}
+.vertical.flip-container:active .front,
+.vertical.flip-container.active .front {
+  -webkit-transform: rotateX(180deg);
+  -moz-transform: rotateX(180deg);
+  -o-transform: rotateX(180deg);
+  transform: rotateX(180deg);
+}
+#cbx-team {
+  /* entire container, keeps perspective */
+  /*  UPDATED! flip the pane when hovered */
+  /* flip speed goes here */
+  /* hide back of pane during swap */
+  /*  UPDATED! front pane, placed above back */
+  /* back, initially hidden pane */
+  /*
+      Some vertical flip updates
+  */
+}
+#cbx-team .cbx-single-team {
+  padding-bottom: 40px;
+}
+#cbx-team .back-single-text p,
+#cbx-team .font-single-text p {
+  padding: 15px;
+}
+#cbx-team .cbx-font-side {
+  background: #505050;
+  border: 1px solid #f5740a;
+}
+#cbx-team .cbx-back-side {
+  background: #f5740a;
+}
+#cbx-team .cbx-member-social i {
+  padding: 30px 0 10px 0;
+  color: #ba5808;
+  font-size: 50px;
+  font-size: 5rem;
+}
+#cbx-team .cbx-member-social i:hover {
+  color: #ffffff;
+}
+#cbx-team .font-single-img {
+  padding-top: 0px;
+}
+#cbx-team .font-single-img img {
+  border: 1px solid #f5740a;
+  width: 160px;
+  height: 290px;
+}
+#cbx-team .flip-container {
+  margin: 0 auto;
+}
+#cbx-team .flip-container {
+  perspective: 1000;
+  transform-style: preserve-3d;
+}
+#cbx-team .flip-container:active .back {  /*여기가 핵심 코드 */
+  transform: rotateY(0deg);
+}
+#cbx-team .flip-container:active .front {
+  transform: rotateY(180deg);
+}
+#cbx-team .flip-container,
+#cbx-team .front,
+#cbx-team .back {
+  width: 160px;
+  height: 290px;
+}
+#cbx-team .flipper {
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+#cbx-team .front,
+#cbx-team .back {
+  backface-visibility: hidden;
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#cbx-team .front {
+  z-index: 2;
+  transform: rotateY(0deg);
+}
+#cbx-team .back {
+  transform: rotateY(-180deg);
+}
+#cbx-team .vertical.flip-container {
+  position: relative;
+}
+#cbx-team .vertical .back {
+  transform: rotateX(180deg);
+}
+#cbx-team .vertical.flip-container:target .back {
+  transform: rotateX(0deg);
+}
+#cbx-team .vertical.flip-container:target .front {
+  transform: rotateX(180deg);
+}
 /*! Customized By JEWEl for Codeboxr{V-1.02} */
 /* ==========================================================================
     CodeboxrJEWEl Author's custom  Responsive styles
@@ -829,6 +1106,63 @@ input#subscribe::ms-input-placeholder {
   body {
     padding: 0;
   }
+  /**************************
+    ** Countdown
+    ***************************/
+  .lz-countdown-main .row {
+    margin: 0;
+  }
+  .lz-countdown-main .col-xs-10 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .lz-countdown-container .col-xs-10 {
+    width: 100%;
+  }
+  .lz-countdown-container .col-xs-3 {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .lz-countdown-container .col-xs-offset-1 {
+    margin: 0;
+  }
+  .lz-cd-number .digit {
+    font-size: 60px;
+    top: 10px;
+  }
+  .lz-team-content p {
+    font-size: 16px !important;
+  }
+  .lz-git-contact {
+    margin-left: 70px;
+  }
+  .lz-contact-li .lz-icon {
+    left: 0.857143em;
+  }
+  #subscribe {
+    font-size: 20px;
+    height: 40px;
+    padding-left: 5px;
+  }
+  .lz-submit-btn {
+    font-size: 14px;
+    height: 40px;
+  }
+  .lz-section-header h2 {
+    margin: 70px 0 35px 0;
+    font-size: 50px;
+  }
+  .cbx-parllax-box,
+  .cbx-parllax-box p,
+  .lz-about-description,
+  .lz-about-description p,
+  .lz-about-description div {
+    line-height: 24px;
+    font-size: 20px;
+  }
+  .cbx-parallax {
+    min-height: 300px;
+  }
   /*********************
     ** Team
     *********************/
@@ -840,6 +1174,70 @@ input#subscribe::ms-input-placeholder {
   /*********************
     ** Team End
     *********************/
+  /****************
+    ** Get in Touch
+    ****************/
+  .lz-git-contact {
+    font-size: 20px;
+    line-height: 25px;
+  }
+  /****************
+    ** Get in Touch
+    ****************/
+  .lz-subscribe {
+    margin-top: 30px;
+    text-align: center;
+  }
+  .lz-cd-number .digit .top,
+  .lz-cd-number .digit .bottom {
+    font-family: helvetica;
+  }
+  #carousel-reviews .carousel-control.left {
+    left: 0;
+  }
+  #carousel-reviews .carousel-control.right {
+    right: 10px;
+  }
+  .xs-text-center {
+    text-align: center;
+  }
+  .col-item .photo img {
+    margin: 0 auto;
+    width: 70%;
+  }
+  .og-expander h3 {
+    font-size: 20px;
+    font-weight: bolder;
+    padding: 0;
+    margin: 0;
+  }
+  .og-details {
+    padding: 0 ;
+    margin: 0;
+  }
+  .portfolio-select ul li {
+    border: 2px solid #f5740a;
+    border-radius: 4px;
+    color: #f5740a;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 10px;
+    font-weight: bold;
+    margin-right: 2px;
+    margin-top: 5px;
+    padding: 5px 7px;
+  }
+  /******* Latest news **********/
+  .cbx-latest-area .lz-flip {
+    height: 260px;
+  }
+  /******* End Latest news **********/
+  .portfolio-select ul li {
+    border: 1px solid #f5740a;
+  }
+  .portfolio-select ul li:hover {
+    border: 1px solid #fff;
+  }
   .hvr-underline-from-center:before {
     height: 2px;
   }
@@ -857,12 +1255,129 @@ input#subscribe::ms-input-placeholder {
 }
 /* Landscape phones and down */
 @media (max-width: 480px) {
+  #cbx-award .cbx-counter-area i {
+    background: none !important;
+  }
+  .lz-subscribe {
+    max-width: 70%;
+    margin: 0 auto;
+  }
+  #cbx-portfolio {
+    padding-bottom: 50px;
+  }
   .carousel-control-multi {
     left: -3%;
   }
   .carousel-control.right {
     background: none;
     right: -3%;
+  }
+  .cbx-carousel-indicators {
+    bottom: -12%;
+  }
+  .cbx-carousel-indicators li {
+    border: 1px solid #505050;
+  }
+  #cbstepreviews .carousel-control.left {
+    top: 100%;
+    left: 30%;
+  }
+  #cbstepreviews .carousel-control.right {
+    top: 100%;
+    right: 30%;
+  }
+  #cbstepreviews .carousel-control.right {
+    /*  display: none;*/
+    top: 100%;
+    right: 30%;
+  }
+  #cbstepreviews .carousel-control {
+    display: block;
+  }
+  html {
+    font-size: 50%;
+  }
+  #cbx-brand .cbx-inner {
+    padding-bottom: 0px;
+  }
+  #cbx-brand .cbx-single-brand {
+    margin-bottom: 50px;
+  }
+  #cbx-aboutus .cbx-inner {
+    padding-bottom: 0px;
+  }
+  .portfolio-area {
+    padding-bottom: 40px;
+  }
+  #cbx-pricing .single-pricing {
+    margin-bottom: 15px;
+    padding-bottom: 20px;
+  }
+  #cbx-team .cbx-team-inner {
+    padding-bottom: 50px;
+  }
+  #cbx-news .cbx-inner {
+    padding-bottom: 20px;
+  }
+  /*award section*/
+  #cbx-award {
+    margin-top: 50px;
+  }
+  #cbx-award .cbx-inner {
+    padding: 50px 0px 20px 0px;
+  }
+  #cbx-award .cbx-award-float {
+    float: left;
+    display: inline-block;
+    margin-bottom: 30px;
+  }
+  #cbx-award .cbx-counter-area {
+    background-color: rgba(80, 80, 80, 0);
+    max-width: 95%;
+    border: none;
+    padding-bottom: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+  #cbx-award .cbx-counter-area i {
+    font-size: 30px;
+    color: #f5740a;
+    background: none;
+    padding: 0px 20px 0px 0px;
+  }
+  #cbx-award .cbx-counter-area .cbx-counter {
+    padding-right: 30px;
+    color: #ffffff;
+    font-size: 16px;
+    font-size: 1.6rem;
+    clear: none;
+    display: block;
+    max-height: 0px;
+    margin-top: 0px;
+    margin-bottom: 5px;
+    max-width: 30%;
+  }
+  #cbx-award .cbx-counter-area span {
+    font-family: 'Raleway', Arial, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    font-size: 1.6rem;
+    color: #ffffff;
+    text-transform: uppercase;
+  }
+  #cbx-award .cbx-counter-area:hover {
+    background: none;
+    border: none;
+  }
+  #cbx-award .cbx-counter-area:hover i {
+    background: none;
+  }
+  .cbx-overlay {
+    padding: 0px 0px 50px 0px;
+  }
+  .cbx-subscribe-form {
+    border: 2px solid #ba5808;
+    border-radius: 5px 5px 5px 5px;
   }
   .lz-main-heading,
   .lz-main-heading > span {
@@ -935,6 +1450,43 @@ input#subscribe::ms-input-placeholder {
   /*********************
     ** Team End
     *********************/
+  /****************
+    ** Get in Touch
+    ****************/
+  .lz-git-contact {
+    font-size: 20px;
+    line-height: 25px;
+  }
+  /****************
+    ** Get in Touch
+    ****************/
+  .lz-facebook,
+  .lz-twitter,
+  .lz-instagram,
+  .lz-google,
+  .lz-linkedin,
+  .lz-tumblr,
+  .lz-rss {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0.4);
+    color: #ffffff;
+    float: left;
+    font-size: 23px;
+    height: 34px;
+    padding: 5px;
+    width: 34px;
+  }
+  ul.lz-social li {
+    padding: 0;
+  }
+  .lz-socialnetwork ul {
+    height: 35px;
+  }
+  .cbx-parllax-box h2 {
+    font-size: 45px;
+  }
+  .lz-overlap {
+    background-color: transparent !important;
+  }
 }
 /* //480 */
 /* Landscape phones and down */
@@ -1083,112 +1635,3 @@ input#subscribe::ms-input-placeholder {
 /* Small Devices, Tablets */
 /* Extra Small Devices, Phones */
 /* Custom, iPhone Retina */
-/* 추가적인 코드 */
-#cbx-team .panel {
-  float: left;
-  width: 160px;
-  height: 290px;
-  margin: 20px;
-  position: relative;
-  font-size: .8em;
-  background: transparent;
-
-  -webkit-perspective: 600px;
-          perspective: 600px;
-}
-/* -- make sure to declare a default for every property that you want animated -- */
-/* -- general styles, including Y axis rotation -- */
-#cbx-team .panel .front {
-  float: none;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 900;
-  width: inherit;
-  height: inherit;
-  border: 0px solid #ccc;
-  background: transparent;
-  text-align: center;
-  box-shadow: 0 1px 5px rgba(0,0,0,0.9);
-
-  -webkit-transform: rotateX(0) rotateY(0);
-          transform: rotateX(0) rotateY(0);
-
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
-
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-
-  /* -- transition is the magic sauce for animation -- */
-  -webkit-transition: all .4s ease-in-out;
-          transition: all .4s ease-in-out;
-}
-#cbx-team .panel.flip .front {
-  z-index: 900;
-  background: transparent;
-  box-shadow: 0 15px 50px rgba(0,0,0,0.2);
-
-  -webkit-transform: rotateY(179deg);
-          transform: rotateY(179deg);
-}
-
-#cbx-team .panel .back {
-  float: none;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 800;
-  width: inherit;
-  height: inherit;
-  border: 0px solid #ccc;
-  background: transparent;
-  text-shadow: 1px 1px 1px rgba(0,0,0,0.6);
-
-  -webkit-transform: rotateY(-179deg);
-          transform: rotateY(-179deg);
-
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
-
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-
-  /* -- transition is the magic sauce for animation -- */
-  -webkit-transition: all .4s ease-in-out;
-          transition: all .4s ease-in-out;
-}
-
-#cbx-team .panel.flip .back {
-  z-index: 1000;
-  background: transparent;
-
-  -webkit-transform: rotateX(0) rotateY(0);
-          transform: rotateX(0) rotateY(0);
-
-  box-shadow: 0 15px 50px rgba(0,0,0,0.2);
-}
-
-/* -- Y axis rotation for click panel -- */
-#cbx-team .click .front {
-  cursor: pointer;
-  -webkit-transform: rotateY(0);
-          transform: rotateY(0);
-}
-#cbx-team .click.flip .front {
-  -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
-}
-#cbx-team .click .back {
-  cursor: pointer;
-  -webkit-transform: rotateY(-180deg);
-          transform: rotateY(-180deg);
-}
-#cbx-team .click.flip .back {
-  -webkit-transform: rotateY(0);
-          transform: rotateY(0);
-}
-
-/* -- cosmetics -- */
-#cbx-team .panel .pad {padding: 0 15px; }
-#cbx-team .panel.flip .action {display: none; }

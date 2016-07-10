@@ -1,45 +1,76 @@
-<!-- TEAM SECTION START -->
+<html lang="en-us" dir="ltr" class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="//code.jquery.com/jquery-1.8.3.min.js"></script>
+<title>타로카드 운세 확인</title>
+
+</head>
+<body>
+<script>
+var cardcount = 0;
+if(cardcount <= 3) {
+  $(document).ready(function(){
+
+    // set up hover panels
+    // although this can be done without JavaScript, we've attached these events
+    // because it causes the hover to be triggered when the element is tapped on a touch device
+    $('.hover').hover(function(){
+      $(this).addClass('flip');
+    },function(){
+      $(this).removeClass('flip');
+    });
+
+    // set up click/tap panels
+    $('.click').toggle(function(){
+      $(this).addClass('flip');
+			cardcount++;
+    },function(){
+      $(this).removeClass('flip');
+			cardcount--;
+    });
+
+  });
+}
+else {
+	alert("3개 이상 선택하실 수 없습니다.");
+}
+</script>
 <section>
-    <div id="cbx-team" class="cbx-section cbx-team">
-        <div class="cbx-team-inner">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-12">
-                        <div class="cbx-heading text-center">
-                            <h2 class="uppercase wow fadeInUp">카드 3장을 선택하세요</h2>
-                            <hr noshade size="" width="" color="">
-                            <p class=" wow flipInY">22장의 카드 중 3장을 선택하세요</p>
-                        </div>
-                    </div>
-                </div><!-- //ROW Our Team Header -->
-                <div class="row">
-                  <% 0.upto(21) do |y| %>
-                    <div class="col-xs-12 col-sm-6 col-md-2 col-lg-2">
-                        <div class="cbx-single-team text-center">
-                            <div class="flip-container" ontouchstart="this.classList.toggle('active');">
-                                <div class="flipper">
-                                    <!-- font content -->
-                                    <div class="front cbx-font-side">
-                                        <div class="font-single-img text-center">
-                                            <%= image_tag "back.png" %>
-                                        </div>
-                                    </div> <!-- //font content -->
-                                    <!-- back content -->
-                                    <div class="back cbx-back-side">
-                                        <div class="text-center">
-                                            <div class="text-center back-single-text">
-                                                <%= image_tag @image_[y] %>
-                                            </div>
-                                        </div>
-                                    </div><!-- //back content -->
-                                </div>
-                            </div>
-                        </div> <!--//single team -->
-                      </div> <!--//single team main col 3-->
-                    <% end %>
+  <div id="cbx-team" class="cbx-section cbx-team">
+      <div class="cbx-team-inner">
+          <div class="container">
+              <div class="row">
+                  <div class="col-sm-12">
+                      <div class="cbx-heading text-center">
+                          <h2 class="uppercase wow fadeInUp">카드 3장을 선택하세요</h2>
+                          <hr noshade size="" width="" color="">
+                          <p class=" wow flipInY">22장의 카드 중 3장을 선택하세요</p>
+                      </div>
                   </div>
-                </div> <!--//single team main row-->
-            </div> <!--//CONTAINER-->
-        </div> <!--//INNER-->
-    </div> <!--//SECTION-->
-</section> <!-- //New Team Section 24.12.2014  -->
+              </div> <!-- 안내문 -->
+              <div class="row">
+                	<% 0.upto(21) do |y| %>
+                  		<div class="col-xs-12 col-sm-6 col-md-2 col-lg-2">
+												<div class="click panel">
+														<div class="front">
+																<%= image_tag "back.png" %>
+														</div>
+														<div class="back">
+																<%= image_tag @image_[y] %>
+														</div>
+												</div>
+                  		</div> <!--//single team main col 3-->
+                	<% end %>
+              </div> <!--//single team main row-->
+          	</div> <!--//CONTAINER-->
+						<div class="row">
+							<span class="input-group-btn" align="center">
+							<a href="/home/result"><button class="btn lz-submit-btn"
+											type="button ">확인</button></a>
+							</span>
+						</div>
+      </div> <!--//INNER-->
+  </div> <!--//SECTION-->
+</section>
+</body>
+</html>

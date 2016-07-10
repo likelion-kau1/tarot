@@ -65,17 +65,35 @@ a:focus {
 .lz-flip .card .back {
   background: #3498db;
 }
-
+.portfolio-select .hvr-underline-from-center:before {
+  background: #3498db;
+}
+.og-details h3,
+.da-thumbs li a {
+  color: #3498db;
+}
+.portfolio-select ul li {
+  border: 0px solid #3498db;
+  color: #3498db;
+}
 .lz-team-img img {
   border: 0px solid #3498db;
 }
-
+.lz-git-form-control {
+  border: opx solid #3498db;
+}
+.lz-git-submit-btn {
+  background-color: #ffffff;
+  border: 0px solid #3498db;
+}
 .lz-git-submit-btn:hover,
 .lz-git-submit-btn:focus,
 .lz-git-submit-btn:active {
   background-color: #3498db;
 }
-
+.price-text-color {
+  color: #3498db;
+}
 .lz-latest-post-view-all {
   color: #3498db;
 }
@@ -178,6 +196,15 @@ input#subscribe::ms-input-placeholder {
 .og-details a:hover {
   border-color: #3498db;
 }
+div.lz-kkcountdown .kkc-dni-text,
+div.lz-kkcountdown .kkc-godz-text,
+div.lz-kkcountdown .kkc-min-text,
+div.lz-kkcountdown .kkc-sec-text,
+div.lz-kkcountdown .kkc-days-text,
+div.lz-kkcountdown .kkc-hours-text {
+  margin-right: 10px;
+  color: #fff;
+}
 #cbx-team .font-single-img img {
   border: 0px solid #3498db;
 }
@@ -203,11 +230,42 @@ input#subscribe::ms-input-placeholder {
 .cbx-input-group input:focus {
   border: 1px dashed #3498db;
 }
+#cbx-aboutus .cbx-about-text p span a {
+  color: #3498db;
+}
+#cbx-aboutus .cbx-single-item:hover {
+  background: #3498db none repeat scroll 0 0;
+}
+#cbx-aboutus .cbx-single-item .single-fa {
+  color: #3498db;
+}
+#cbx-aboutus .cbx-about-text p span a {
+  color: #3498db;
+}
+#cbx-aboutus .cbx-single-item .single-fa {
+  color: #3498db;
+}
+#cbx-aboutus .cbx-single-item:hover {
+  background: #3498db;
+}
+#cbx-aboutus .cbx-single-item:hover .single-fa {
+  background: #2077b2;
+}
+#cbx-aboutus .cbx-single-item:hover a:hover {
+  color: #2077b2;
+}
+.portfolio-select ul li:hover,
+.portfolio-select ul li:active {
+  border: 2px dashed #3498db;
+}
 #cbx-team .cbx-font-side {
   border: 0px solid #3498db;
 }
 #cbx-team .cbx-back-side {
   background: #3498db;
+}
+#cbx-team .cbx-member-social i {
+  color: #2077b2;
 }
 #cbx-team .font-single-img img {
   border: 0px solid #3498db;
@@ -215,12 +273,95 @@ input#subscribe::ms-input-placeholder {
 .col-item:hover {
   background: #3498db none repeat scroll 0 0;
 }
-
+#cbx-award .cbx-counter-area i {
+  background: #3498db;
+}
+#cbx-award .cbx-counter-area:hover {
+  background: #3498db;
+}
+#cbx-award .cbx-counter-area:hover i {
+  background: #2077b2;
+}
+#cbx-pricing .single-pricing .spricing-top h3 {
+  color: #3498db;
+}
+#cbx-pricing .single-pricing .spricing-bottom h3 {
+  color: #3498db;
+}
+#cbx-pricing .single-pricing .spricing-bottom a {
+  color: #3498db;
+}
+#cbx-pricing .single-pricing ul li i {
+  color: #3498db;
+}
+#cbx-pricing .single-pricing:hover {
+  border: 1px dashed #3498db;
+}
+#cbx-pricing .recommended-pricing {
+  background: #3498db;
+}
+#cbx-pricing .recommended-pricing .spricing-bottom h3 {
+  color: #ffffff;
+}
+#cbx-pricing .recommended-pricing .spricing-bottom a {
+  color: #3498db;
+}
+#cbx-pricing .recommended-pricing .spricing-bottom a:hover {
+  background: #2077b2;
+}
+#cbx-news .single-news .snews-bottom h4 {
+  color: #3498db;
+}
+#cbx-news .single-news .snews-bottom a {
+  background: #3498db;
+}
+#cbx-news .single-news:hover .snews-bottom {
+  background: #3498db;
+}
+#cbx-news .single-news:hover .snews-bottom a {
+  color: #3498db;
+}
+#cbx-news .single-news:hover .snews-bottom a:hover {
+  background: #2077b2;
+}
+.glyphicon {
+  color: #3498db;
+}
+.lz-git-submit-btn {
+  /* background-color: @brandcolor2;*/
+  border: 1px solid #2077b2;
+}
+.lz-git-submit-btn:hover,
+.lz-git-submit-btn:focus,
+.lz-git-submit-btn:active {
+  background-color: #2077b2;
+}
+.lz-git-form-control {
+  border: 1px solid #5faee3 !important;
+}
+.lz-git-form-control {
+  border: 1px solid #5faee3 !important;
+}
+.lz-git-form-control:focus {
+  border: 1px dashed #3498db !important;
+}
+.cbx-contact-info p span a:hover {
+  background: #2077b2 none repeat scroll 0 0;
+}
 .cbx-submit {
   color: #3498db;
 }
 .cbx-submit:hover {
   border: 2px solid #2077b2;
+}
+#cbx-portfolio .cbx-select li a.active {
+  color: #3498db;
+}
+#cbx-portfolio .single-portfolio .figure-caption {
+  background: rgba(52, 152, 219, 0.8);
+}
+.cbx-contact-info p span a {
+  color: #3498db;
 }
 input.placeholder-style::-webkit-input-placeholder {
   /* WebKit browsers */
@@ -260,6 +401,15 @@ textarea.placeholder-style::ms-input-placeholder {
 }
 ::-webkit-input-placeholder {
   color: #3498db;
+}
+.lz-git-submit-btn {
+  background-color: #3498db;
+}
+.lz-social-list:hover {
+  color: #3498db;
+}
+.lz-tooltip-inner {
+  background: #3498db;
 }
 ::-webkit-input-placeholder {
   /* WebKit browsers */
