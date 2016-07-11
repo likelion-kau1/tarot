@@ -8,32 +8,19 @@
 <body>
 <script>
 var cardcount = 0;
-if(cardcount <= 3) {
   $(document).ready(function(){
-
-    // set up hover panels
-    // although this can be done without JavaScript, we've attached these events
-    // because it causes the hover to be triggered when the element is tapped on a touch device
-    $('.hover').hover(function(){
-      $(this).addClass('flip');
-    },function(){
-      $(this).removeClass('flip');
-    });
-
-    // set up click/tap panels
     $('.click').toggle(function(){
-      $(this).addClass('flip');
-			cardcount++;
+      if(cardcount<3){
+        $(this).addClass('flip');
+           cardcount++;
+         }else{
+          alert("3개 이상 선택하실 수 없습니다.");
+         }
     },function(){
       $(this).removeClass('flip');
-			cardcount--;
+         cardcount--;
     });
-
   });
-}
-else {
-	alert("3개 이상 선택하실 수 없습니다.");
-}
 </script>
 <section>
   <div id="cbx-team" class="cbx-section cbx-team">
