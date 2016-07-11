@@ -6,22 +6,28 @@
 
 </head>
 <body>
-<script>
-var cardcount = 0;
-  $(document).ready(function(){
-    $('.click').toggle(function(){
-      if(cardcount<3){
-        $(this).addClass('flip');
-           cardcount++;
-         }else{
-          alert("3개 이상 선택하실 수 없습니다.");
-         }
-    },function(){
-      $(this).removeClass('flip');
-         cardcount--;
+  <script>
+  var cardcount = 0;
+    $(document).ready(function(){
+      $('.click').toggle(function(){
+        if(cardcount<3){
+          $(this).addClass('flip');
+          cardcount++;
+        }
+        else{
+          alert("3개 이상 선택하실 수 없습니다.1");
+        }
+      },function(){
+        if($(this).attr('class') == "click panel flip"){
+          $(this).removeClass('flip');
+          cardcount--;
+        }
+        else{
+          alert("3개 이상 선택하실 수 없습니다.2");
+        }
+      });
     });
-  });
-</script>
+  </script>
 <section>
   <div id="cbx-team" class="cbx-section cbx-team">
       <div class="cbx-team-inner">
@@ -31,7 +37,7 @@ var cardcount = 0;
                       <div class="cbx-heading text-center">
                           <h2 class="uppercase wow fadeInUp">카드 3장을 선택하세요</h2>
                           <hr noshade size="" width="" color="">
-                          <p class=" wow flipInY">22장의 카드 중 3장을 선택하세요</p>
+                          <p class=" wow flipInY"><%= $name %>님의 운세를 확인하기 위해 22장의 카드 중 3장을 선택하세요</p>
                       </div>
                   </div>
               </div> <!-- 안내문 -->
@@ -43,7 +49,7 @@ var cardcount = 0;
 																<%= image_tag "back.png" %>
 														</div>
 														<div class="back">
-																<%= image_tag @image_[y] %>
+																<%= image_tag $image_[y] %>
 														</div>
 												</div>
                   		</div> <!--//single team main col 3-->

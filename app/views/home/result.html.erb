@@ -8,19 +8,19 @@
                         <div class="cbx-heading text-center">
                             <h2 class="uppercase wow fadeInUp">운세 결과</h2>
                             <hr noshade size="" width="" color="">
-                            <p class=" wow flipInY">선택하신 3장의 카드 조합에 따른 해석은 다음과 같습니다.</p>
+                            <p class=" wow flipInY"><%= $name %>님이 선택하신 3장의 카드 조합에 따른 해석은 다음과 같습니다.</p>
                         </div>
                     </div>
                 </div><!-- //ROW Our Team Header -->
                 <div class="row">
                   <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4" align="center">
-                    <%= image_tag @image_3 %>
+                    <%= image_tag $image_[1] %>
                   </div> <!--//선택된 카드 중 하나-->
                   <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4" align="center">
-                    <%= image_tag @image_3 %>
+                    <%= image_tag $image_[3] %>
                   </div> <!--//선택된 카드 중 둘-->
                   <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4" align="center">
-                    <%= image_tag @image_3 %>
+                    <%= image_tag $image_[2] %>
                   </div> <!--//선택된 카드 중 셋-->
                 </div> <!--//single team main row-->
             </div> <!--//CONTAINER-->
