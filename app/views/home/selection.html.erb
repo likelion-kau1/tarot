@@ -8,23 +8,20 @@
 <body>
   <script>
   var cardcount = 0;
-    $(document).ready(function(){
+    $(function(){
       $('.click').toggle(function(){
         if(cardcount<3){
           $(this).addClass('flip');
           cardcount++;
         }
         else{
-          alert("3개 이상 선택하실 수 없습니다.1");
+          alert("3개 이상 선택하실 수 없습니다.");
         }
       },function(){
-        if($(this).attr('class') == "click panel flip"){
-          $(this).removeClass('flip');
-          cardcount--;
-        }
-        else{
-          alert("3개 이상 선택하실 수 없습니다.2");
-        }
+      });
+      $('#resetbtn').click(function(){
+        $('.flip').removeClass('flip');
+        cardcount = 0;
       });
     });
   </script>
@@ -42,9 +39,14 @@
                   </div>
               </div> <!-- 안내문 -->
               <div class="row">
+  							<span class="input-group-btn" align="center">
+  							<button id="resetbtn" class="btn lz-submit-btn">리셋</button>
+  							</span>
+  						</div>
+              <div class="row">
                 	<% 0.upto(21) do |y| %>
                   		<div class="col-xs-12 col-sm-6 col-md-2 col-lg-2">
-												<div class="click panel">
+												<div class="click panel" id="card<%=y%>">
 														<div class="front">
 																<%= image_tag "back.png" %>
 														</div>
