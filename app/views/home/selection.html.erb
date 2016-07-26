@@ -9,15 +9,14 @@
   <script>
   var cardcount = 0;
     $(function(){
-      $('.click').toggle(function(){
-        if(cardcount<3){
+      $('.click').click(function(){
+        if(cardcount<3&&($(this).attr('class')!="click panel flip")){
           $(this).addClass('flip');
           cardcount++;
         }
-        else{
+        else if(cardcount == 3){
           alert("3개 이상 선택하실 수 없습니다.");
         }
-      },function(){
       });
       $('#resetbtn').click(function(){
         $('.flip').removeClass('flip');
