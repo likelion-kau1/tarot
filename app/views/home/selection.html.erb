@@ -13,14 +13,38 @@
         if(cardcount<3&&($(this).attr('class')!="click panel flip")){
           $(this).addClass('flip');
           cardcount++;
+          cardpick = this.getElementsByClassName("back");
+          card_id1 = cardpick[0].firstElementChild.src;
+            $.ajax({
+              method: "GET",
+              url: "/home/picks",
+              data: {card_id: card_id1},
+              success: function(){
+
+              },
+              error: function(){
+                alert( "선택이 정상적으로 이루어지지 않았습니다." );
+              }
+            })
         }
-        else if(cardcount == 3){
-          alert("3개 이상 선택하실 수 없습니다.");
+        else if(cardcount==3&&($(this).attr('class')!="click panel flip")){
+          alert("3개를 초과하여 선택하실 수 없습니다.");
         }
+        else{}
       });
       $('#resetbtn').click(function(){
         $('.flip').removeClass('flip');
         cardcount = 0;
+        $.ajax({
+          method: "GET",
+          url: "/home/destroy",
+          success: function(){
+
+          },
+          error: function(){
+            alert( "리셋이 정상적으로 이루어지지 않았습니다." );
+          }
+        })
       });
     });
   </script>
@@ -39,18 +63,20 @@
               </div> <!-- 안내문 -->
               <div class="row">
   							<span class="input-group-btn" align="center">
-  							<button id="resetbtn" class="btn lz-submit-btn">리셋</button>
+                  <!-- <a href="/home/destroy"> -->
+                    <button id="resetbtn" class="btn lz-submit-btn">리셋</button>
+                  </a>
   							</span>
   						</div>
               <div class="row">
                 	<% 0.upto(21) do |y| %>
                   		<div class="col-xs-12 col-sm-6 col-md-2 col-lg-2">
-												<div class="click panel" id="card<%=y%>">
+												<div class="click panel">
 														<div class="front">
 																<%= image_tag "back.png" %>
 														</div>
 														<div class="back">
-																<%= image_tag $image_[y] %>
+																<%= image_tag($image_[y], class:"picks")  %>
 														</div>
 												</div>
                   		</div> <!--//single team main col 3-->

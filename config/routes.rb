@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
   root 'home#index'
   get 'home/index'
-  post 'home/selection'
+  get 'home/selection'
+  get 'home/picks'
+  # get 'home/saveuser'
   get 'home/result'
+  get 'home/destroy' => "home#destroy"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

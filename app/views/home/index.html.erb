@@ -33,6 +33,24 @@
 
     </head>
     <body>
+      <!-- <script>
+      $(function() {
+        $(".btn").click(function(){
+          username = $(this.name).val();
+          $.ajax({
+            method: "GET",
+            url: "/home/saveuser",
+            data: {name: username},
+            success: function(){
+                alert( username+"님, 환영합니다!" );
+              },
+            error: function(){
+                alert( "이름이 정확하게 입력되지 않았습니다." );
+              }
+            })
+          });
+      });
+      </script> -->
     <!--[if lt IE 7]>
         <p class="browsehappy">We are Extreamly sorry, But the browser you are using is probably from when civilization started. Which is way behind to view this site properly. Please update to a modern browser, At least a real browser. </p>
         <![endif]-->
@@ -52,7 +70,7 @@
                         <div class="row">
                             <div class="col-xs-12 col-sm-offset-2 col-sm-8 col-md-offset-3 col-md-6  ">
                                 <div class="lz-subscribe wow slideInRight animated">
-                                    <form class="subscribe-form cbx-subscribe-form" role="form" action="/home/selection" method="POST">
+                                    <form class="subscribe-form cbx-subscribe-form" role="form" action="/home/selection" method="GET">
                                         <div class="input-group cbx-input-group">
                                             <input class="lz-input form-control" type="text" id="subscribe" name="name" placeholder="이름을 입력하세요" required="required">
                                                 <span class="input-group-btn">
