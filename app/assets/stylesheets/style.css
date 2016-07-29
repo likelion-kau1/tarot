@@ -259,6 +259,23 @@ input#subscribe::ms-input-placeholder {
   font-size: 3rem;
   color: #fff;
 }
+.lz-homebtn {
+  font-family: 'Raleway', Arial, sans-serif;
+  font-weight: 400;
+  background-color: #f7903b;
+  text-transform: uppercase;
+  background-image: none;
+  background-repeat: repeat-x;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  color: #3498db;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  border-radius: none;
+  height: 70px;
+  font-size: 30px;
+  font-size: 3rem;
+  color: #fff;
+  margin-bottom: 50px;
+}
 .cbx-input-group {
   border: none;
 }
