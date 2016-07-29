@@ -234,6 +234,15 @@ input#subscribe::ms-input-placeholder {
   border: 5px solid #ba5808;
   border-radius: 10px 10px 10px 10px;
 }
+/*떠다니는 버튼항목*/
+.reset-submit-div {
+  height: 75px;
+	width: 100px;
+  position: fixed;
+	margin-left: 150px;
+  margin-top: 150px;
+  z-index: 10;
+}
 .lz-submit-btn {
   font-family: 'Raleway', Arial, sans-serif;
   font-weight: 400;

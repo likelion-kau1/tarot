@@ -49,6 +49,18 @@
     });
   </script>
 <section>
+  <!-- 떠다니는 버튼 코드 -->
+  <div class="reset-submit-div">
+    <span class="input-group-btn" align="center">
+    <a href="/home/result"><button class="btn lz-submit-btn"
+            type="button ">확인</button></a>
+    </span>
+    <span class="input-group-btn" align="center">
+      <!-- <a href="/home/destroy"> -->
+        <button id="resetbtn" class="btn lz-submit-btn">리셋</button>
+      </a>
+    </span>
+  </div>
   <div id="cbx-team" class="cbx-section cbx-team">
       <div class="cbx-team-inner">
           <div class="container">
@@ -61,13 +73,6 @@
                       </div>
                   </div>
               </div> <!-- 안내문 -->
-              <div class="row">
-  							<span class="input-group-btn" align="center">
-                  <!-- <a href="/home/destroy"> -->
-                    <button id="resetbtn" class="btn lz-submit-btn">리셋</button>
-                  </a>
-  							</span>
-  						</div>
               <div class="row">
                 	<% 0.upto(21) do |y| %>
                   		<div class="col-xs-12 col-sm-6 col-md-2 col-lg-2">
@@ -83,12 +88,6 @@
                 	<% end %>
               </div> <!--//single team main row-->
           	</div> <!--//CONTAINER-->
-						<div class="row">
-							<span class="input-group-btn" align="center">
-							<a href="/home/result"><button class="btn lz-submit-btn"
-											type="button ">확인</button></a>
-							</span>
-						</div>
       </div> <!--//INNER-->
   </div> <!--//SECTION-->
 </section>
