@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   # get 'home/saveuser'
   get 'home/result'
   get 'home/destroy' => "home#destroy"
+
+  get '/destroy_pick' => "home#destroy_pick"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
